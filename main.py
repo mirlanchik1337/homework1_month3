@@ -45,16 +45,11 @@ async def picture(message: types.Message):
         await bot.send_photo(chat_id=message.from_user.id, photo=f)
 
 
-@dp.message_handler()
-async def upper_message(message: types.Message):
-    if len(message.text.split()) >= 3:
-        await message.answer(message.text.upper())
 
 @dp.message_handler()
 async def upper_message(message: types.Message):
     if len(message.text.split()) >= 3:
         await message.answer(message.text.upper())
-
 
 
 
